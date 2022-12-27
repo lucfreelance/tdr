@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historieta - Responde ocho sencillas preguntas y recibirás una divertida historieta interactiva basada en ti 😉</title>
+    <style type="text/css">
+        /* Variables CSS */
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #150050;
+            --#5837D0;
+            --#394A6D;
+            --#3C9D9B;
+            --#52DE97;
+            --#C0FFB3;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        /* Reglas de estilo */
+        * {
+            margin: 20;
+            padding: 10;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--very-light-pink);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: var(--black);
+            font-size: var(--lg);
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        h2 {
+            color: var(--black);
+            font-size: var(--md);
+            margin-bottom: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            background-color: var(--white);
+            border: 2px solid var(--black);
+            color: var(--black);
+            font-size: var(--md);
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 400px;
+        }
+
+        button {
+            background-color: var(--black);
+            border: none;
+            color: var(--white);
+            font-size: var(--md);
+            padding: 10px 20px;
+        }
+
+        p {
+            color: var(--black);
+            font-size: var(--md);
+            margin-top: 20px;
+        }
+
+        .bola {
+            width: 50%;
+            height: 50%;
+            margin:10px auto;
+            display:block;
+            padding: 10px 10px 10px 10px;
+            border-radius: 10;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #116349;
+            padding: 5px 5px 5px 5px;
+            cursor: pointer;  
+            margin-top: 100px;
+            justify-content: space-between;            
+        }
+
+        .oculto {
+            display: none;
+        }
+
+        .resultado {
+            cursor: pointer;
+        }
+
+        /* Si sale mal corta esta parte hasta los media queries */
+        .header-1 {
+  padding: 15;
+  position: left;
+}
+
+.header-2 {
+  padding: 15;
+  position: right;
+}
+
+.header-3 {
+  padding: 15;
+  position: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Menú hamburguesa para dispositivos móviles */
+.menu {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+/* Sección izquierda de la barra de navegación */
+.home {
+  width: 33%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  width: 180px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.main-menu {
+  width: 180px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+/* Lista de categorías */
+.navbar-left ul {
+  list-style: none;
+  display: flex;
+  margin-left: 30px;
+}
+
+/* Enlaces de la lista de categorías */
+.navbar-left ul li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+/* Sección derecha de la barra de navegación */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Sección del banner home */
+.banner {
+  display: flex;
+  width: 50%;
+}
+
+/* Sección del banner divertidos*/
+.banner-divertidos {
+  display: flex;
+  width: 30%;
+}
+
+/* Lista de enlaces de la cuenta de usuario */
+.navbar-right ul {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+  color: #333;
+}
+
+/* Correo electrónico del usuario */
+.navbar-email {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin-right: 30px;
+}
+
+.mobile-menu {
+  margin-top: 20;
+}
+
+.table-board {
+  padding: 10px;
+  background-color: #f30;
+  margin:0 auto;  
+  font-size: 1.6rem;
+  position: absolute;
+}
+
+td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
+}
+
+.superior {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: var(--clr-bg);  
+  box-decoration-break: none;
+}
+
+.route-button {
+  text-decoration: none;
+  color: #fff;
+  font: 400 var(--base-font) var(--ff);
+  background-color: #f30;  
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+
+
+
+
+        @media screen and (max-width: 480px) {
+            * {
+                margin: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- Menú hamburguesa para dispositivos móviles -->
+        <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+      
+        <!-- Sección izquierda de la barra de navegación -->
+        <div class="home">
+            <!-- Home -->
+            <a href="../index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/61/61972.png" alt="home" class="home" >
+              </a>
+          <!-- Logo -->
+          <img src="./logos/logo_tdr.svg" alt="logo" class="main-menu">
+          <!-- Lista de categorías -->
+          <ul>
+            <li>
+              <a href="/">Eventos</a>
+            </li>
+            <li>
+              <a href="/">Libros y +</a>
+            </li>
+            <li>
+              <a href="/">Redes sociales</a>
+            </li>
+            <li>
+              <a href="/">Postea tu propuesta</a>
+            </li>
+          </ul>
+        </div>
+      
+        <!-- Sección derecha de la barra de navegación -->
+        <div class="navbar-right">
+          <!-- Lista de enlaces de la cuenta de usuario -->
+          <ul>
+            <!-- Correo electrónico del usuario -->
+            <li class="navbar-email">trozos-de-realidad@fundacion-editorial.com</li>
+            <!-- Carrito de compras -->
+            <!-- <li class="navbar-shopping-cart">
+              <img src="./icons/icon_shopping_cart.svg" alt="shopping cart"> -->
+              <div>2</div>
+            </li>
+          </ul>
+        </div>
+      
+        <!-- Menú desplegable para dispositivos de escritorio -->
+        <div class="desktop-menu">
+          <!-- Lista de enlaces del menú desplegable -->
+          <ul>
+            <li>
+              <a href="/">Mi cuenta</a>
+            </li>  
+            <li>
+              <a href="/">Cerrar sesión</a>
+            </li>
+          </ul>
+        </div>
+      
+        <!-- Menú desplegable para dispositivos móviles -->
+        <div class="mobile-menu">
+          <!-- Lista de categorías -->
+          <ul>
+            <li>
+              <a href="/">Eventos</a>
+            </li>
+            <li>
+              <a href="/">Libros y +</a>
+            </li>
+            <li>
+              <a href="/">Redes sociales</a>
+            </li>
+            <li>
+              <a href="/">Postea tu propuesta</a>
+            </li>
+          </ul>
+          <!-- Lista de enlaces de la cuenta de usuario -->
+          <ul>
+            <li>
+                <a href="/">Mi cuenta</a>
+            </li>  
+            <li>
+                <a href="#" class="email">example@example.com</a>
+            </li>
+            <li>
+                <a href="/" class="sign-out">Cerrar sesión</a>
+            </li>
+         </ul>
+       </div>
+    </nav>
+    <header>
+        <div>
+            <img class = bola src="https://i.imgur.com/V9J9qBt.png" alt="Bola de cristal - Historieta">
+        </div>
+    </header>
+    <h1 class = "h1">Responde a la Bola de Cristal las siguientes preguntas y recibirás <br> una divertida historieta interactiva basada en ti y tus gustos:</h1>
+    <h2>Escribe... </h2>
+<main>
+    <input id="trozo1" placeholder="Tu actor / actriz favorito(a) 🎭" /><br>
+    <input id="trozo2" placeholder="Mejor destino vacacional 🌠" /><br>
+    <input id="trozo3" placeholder="Hobbie favorito 🧗‍♂️" /><br>
+    <input id="trozo4" placeholder="Famoso que más te enoja 🤬" /><br>
+    <input id="trozo5" placeholder="Tu miedo más profundo 😱 (Si se puede decir)" /><br>
+    <input id="trozo6" placeholder="Evento más heavy vivido 😭 (Si se puede decir)" /><br>
+    <input id="trozo7" placeholder="Tu actividad favorita de sábado 🥳" /><br>
+    <input id="trozo8" placeholder="Tu actividad favorita de domingo 😎" /><br>
+    <p class="resultado"><button id="btnCalcular" onclick="btnOnClick()">Pulsa el botón
+        🔥🔥🔥🔥 para la REVELACIÓN… ❗</button></p>
+    <span>
+    <p id="result">Hecho con ❤ por @lucfreelance </br> https://github.com/lucfreelance</p>
+    <p class="oculto">
+        Hecho con ❤ por @lucfreelance<br>
+        <link rel="stylesheet" href="https://github.com/lucfreelance">    
+      </p>
+    </span>
+</main>
+
+<script type="text/javascript">
+const h1 = document.querySelector('h1');
+const input1 = document.querySelector('#trozo1');
+const input2 = document.querySelector('#trozo2');
+const input3 = document.querySelector('#trozo3');
+const input4 = document.querySelector('#trozo4');
+const input5 = document.querySelector('#trozo5');
+const input6 = document.querySelector('#trozo6');
+const input7 = document.querySelector('#trozo7');
+const input8 = document.querySelector('#trozo8');
+const btn = document.querySelector('#btnCalcular');
+const pResult = document.querySelector('#result');
+
+function btnOnClick() {
+const sumaInputs = "La otra vez me encontré con " + input1.value + " en mis últimas vacaciones a " + input2.value +
+ ". Lo invité a jugar " + input3.value + ". Me dijo que prefiere que le pase " + input4.value +
+ " por encima a eso. Yo sentí como un ataque de " + input5.value + ", o peor; o tal vez como " + input6.value +
+ ". Entonces le quise invitar a " + input7.value +  ", aceptó! Y le dije que podemos terminar pasándola bien haciendo algo guai como "
+ + input8.value + " y le propuse apostar quien le paga la cena al otro 😊. ¿Adivinen quién ganó? La respuesta es obvia, Watson... 🍺🍛😂🤣🍛🍺";
+pResult.innerText = sumaInputs
+};
+
+    </script>
+</body>
+<!-- <footer class="oculto">
+    Hecho con ❤ por @lucfreelance<br>
+    https://github.com/lucfreelance/
+  </footer> -->
+  <footer class = "footer">
+    <button onclick="location.reload()">Intenta otra vez</button>
+    <button onclick="location.href='../index.html'">Regresa a Inicio</button>
+  </footer>
+</html>
