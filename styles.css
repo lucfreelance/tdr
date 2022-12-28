@@ -23,11 +23,6 @@
   border-radius: 0.8rem;
 }
 
-/* Reset de margen y padding
-* {
-  margin: 0;
-  padding: 0;
-} */
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -41,6 +36,7 @@ html {
 html, body {
   min-height: 100%;
 }
+
 right
 /* Body */
 body {
@@ -54,42 +50,14 @@ body {
 /* Main */
 main {
   height: 500px;
-  display: grid;
   grid-template-columns: 10% 80% 10%;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-
-/* Tabla */
-/* table {
-  border-collapse: collapse;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-} */
 
 body {
   background-color: var(--very-light-pink);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h1 {
-  color: var(--white);
-  font-size: var(--lg);
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 10px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-}
-
-h2 {
-  color: var(--white);
-  font-size: var(--md);
-  margin-bottom: 20px;
-}
-
-main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,7 +114,6 @@ cursor: pointer;
 background-color: #116349;
 }
 
-
 nav {
 display: flex;
 align-items: center;
@@ -195,89 +162,85 @@ padding: 0 15px;
 
 /* Sección derecha de la barra de navegación */
 .navbar-right {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /* Sección del banner home */
 .banner {
-display: flex;
-width: 50%;
-}
-
-/* Sección del banner divertidos*/
-.banner-divertidos {
-display: flex;
-width: 30%;
+  display: flex;
+  width: 30%;
+  margin: auto;
 }
 
 /* Lista de enlaces de la cuenta de usuario */
 .navbar-right ul {
-list-style: none;
-display: flex;
-margin-right: 20px;
-color: #333;
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+  color: #333;
 }
 
 /* Correo electrónico del usuario */
 .navbar-email {
-font-size: 1.2rem;
-font-weight: 500;
-color: #333;
-margin-right: 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin-right: 30px;
 }
 
 .desktop-menu {
-display: inline-block;
-text-decoration: none;
-}
-
-.mobile-menu {
-margin-top: 20;
-display: block;
-text-decoration: none;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  display: flex;
 }
 
 .table-board {
-padding: 10px;
-background-color: #f30;
-margin:0 auto;  
-font-size: 1.6rem;
-position: absolute;
+  padding: 10px;
+  background-color: #f30;
+  margin:0 auto;  
+  font-size: 1.6rem;
+  position: absolute;
 }
 
 td {
-border: 1px solid #ddd;
-text-align: center;
-padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
 }
 
 .superior {
-text-decoration: none;
-font-size: 1.6rem;
-font-weight: 500;
-background-color: var(--clr-bg);  
-box-decoration-break: none;
-}
-
-.route-button {
-text-decoration: none;
-color: #fff;
-font: 400 var(--base-font) var(--ff);
-background-color: #f30;  
-text-decoration: none;
-font-size: 1.6rem;
-font-weight: 500;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: var(--clr-bg);  
+  box-decoration-break: none;
 }
 
 .header-1 {
-  padding: 15;
-  position: left;
+  padding: 15px;
+  position: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .header-2 {
-  padding: 15;
+  padding: 15px;
   position: right;
+  text-decoration: none;
+  color: #fff;
+  font: 400 var(--base-font) var(--ff);
+  background-color: #f30;  
+  text-decoration: none;
+  font-size: 2.2em;
+  font-weight: 500;
+  text-align: center;
 }
 
 .header-3 {
@@ -295,13 +258,12 @@ font-weight: 500;
   height: 80px;
   font-weight: 500;
   color: #fefefe;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  display: flex;
-  align-items: center;
   justify-content: center;
   background-color: #f30;
+  font-weight: bold;
 }
 
 nav {
@@ -374,13 +336,6 @@ nav {
 	padding: 10px 10px 10px 10px;
 }
 
-/* Sección del banner divertidos*/
-.banner-divertidos {
-  display: block;
-  width: 30%;
-	padding: 10px 10px 10px 10px;
-  margin:10px auto;
-}
 
 /* Lista de enlaces de la cuenta de usuario */
 .navbar-right ul {
@@ -398,9 +353,6 @@ nav {
   margin-right: 30px;
 }
 
-.mobile-menu {
-  margin-top: 20;
-}
 
 .table-board {
   padding: 10px;
@@ -425,13 +377,14 @@ td {
 }
 
 .route-button {
-  text-decoration: none;
   color: #fff;
   font: 400 var(--base-font) var(--ff);
   background-color: #f30;  
-  text-decoration: none;
-  font-size: 1.6rem;
+  font: 400 var(--base-font) var(--ff);
   font-weight: 500;
+  text-decoration: none;
+  font-size: 2.2rem;
+  border-radius: 10%;
 }
 
 /* Enlaces */
@@ -470,41 +423,10 @@ a:hover {
           box-sizing: border-box;
       }
 
-      body {
-          background-color: var(--very-light-pink);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-      }
-
-      /* h1 {
-          color: var(--black);
-          font-size: var(--lg);
-          margin-bottom: 20px;
-          margin-top: 20px;
-          margin-left: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 35px;
-          height: 80px;
-          font-weight: 500;
-          color: #fefefe;
-          background-color: #f30;
-          font-size: 1.6rem;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      } */
-
       h2 {
           color: var(--black);
           font-size: var(--md);
           margin-bottom: 20px;
-      }
-
-      main {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
       }
 
       input {
@@ -517,35 +439,10 @@ a:hover {
           width: 400px;
       }
 
-      button {
-          background-color: var(--black);
-          border: none;
-          color: var(--white);
-          font-size: var(--md);
-          padding: 10px 20px;
-      }
-
       p {
           color: var(--black);
           font-size: var(--md);
           margin-top: 20px;
-      }
-
-      .bola {
-          width: 50%;
-          height: 50%;
-          margin:10px auto;
-          display:block;
-          padding: 10px 10px 10px 10px;
-          border-radius: 10;
-      }
-
-      .footer {
-          text-align: center;
-          background-color: #116349;
-          padding: 5px 5px 5px 5px;
-          cursor: pointer;  
-          margin-top: 100px;
       }
 
       .oculto {
@@ -555,8 +452,6 @@ a:hover {
       .resultado {
           cursor: pointer;
       }
-
-      /* Si sale mal corta esta parte hasta los media queries */
 
 nav {
 display: flex;
@@ -620,46 +515,31 @@ align-items: center;
 
 /* Sección del banner home */
 .banner {
-display: flex;
-width: 50%;
-}
-
-/* Sección del banner divertidos*/
-/* .banner-divertidos {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  padding: 35px;
-  height: 80px;
-  font-weight: 500;
-  color: #fefefe;
-  font-size: 1.6rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f30;
-  display: block;
-  width: 30%;
-  align-items: center;
-} */
+  margin: 0 auto;
+  padding: 30px;
+  min-width: 1050px;  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 10);
+  border-radius: 10px 10px 20px 20px;
+}
 
+/* Sección del banner divertidos*/
 .banner-divertidos {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   padding: 30px;
-  min-width: 800px;  
+  min-width: 1050px;  
   box-shadow: 0 4px 6px rgba(0, 0, 0, 10);
   border-radius: 10px 10px 20px 20px;
-}
-
-.banner-divertidos img {
-  max-width: 100%;
-  max-height: 100%;
-}
+    display: block;
+    width: 30%;
+    padding: 10px 10px 10px 10px;
+    margin:10px auto;
+  }
 
 /* Lista de enlaces de la cuenta de usuario */
 .navbar-right ul {
@@ -678,9 +558,12 @@ margin-right: 30px;
 }
 
 .mobile-menu {
-margin-top: 20;
+  margin-top: 20;
+  display: flex;
+  text-decoration: none;
+  color: #333;
 }
-
+  
 .table-board {
 padding: 10px;
 background-color: #f30;
@@ -703,25 +586,6 @@ background-color: var(--clr-bg);
 box-decoration-break: none;
 }
 
-.route-button {
-text-decoration: none;
-color: #fff;
-font: 400 var(--base-font) var(--ff);
-background-color: #f30;  
-font-size: 1.6rem;
-font-weight: 500;
-
-      @media screen and (max-width: 480px) {
-          * {
-              margin: 10px;
-          }
-      }
-
-
-
-
-
-
 /* Responsive para dispositivos móviles */
 @media screen and (max-width: 600px) {
   /* Estilos para dispositivos móviles */
@@ -732,4 +596,3 @@ font-weight: 500;
     display: none;
   }
 }
-

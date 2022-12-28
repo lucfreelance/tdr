@@ -70,6 +70,8 @@
           color: var(--white);
           background-color: var(--black);
           margin: 10px 10px 10px 10px; 
+          text-align: center; /* Esta línea centrará el texto */
+          font-family: "Roboto", sans-serif;
         }
 
         .h2 {
@@ -104,20 +106,6 @@
   position: left;
 }
 
-/* Sección del banner home */
-.header {
-  list-style: none;
-  display: inline-table;
-  align-items: center;
-  justify-content: space-between;
-  font-size: var(--lg);
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  display: inline;
-  word-wrap: break-word;
-  margin: 0;
-  text-align: center;
-}
-
 nav {
   display: flex;
   align-items: center;
@@ -128,10 +116,14 @@ nav {
 }
 
 .home {
-  width: 5%;
+  width: 10%;
+  display: flex;
   margin-top: 10px;
   margin-bottom: 30px;
-  position: center;
+  word-wrap: break-word;
+  justify-content: center;
+  margin: auto; 
+  border-radius: 25%;
 }
 
 .main-menu {
@@ -207,18 +199,17 @@ nav {
     </style>
 </head>
 <body>
-    <header class = "header">
-        <div>
+    <header>        
             <!-- Home -->
-            <div>
             <a href="../index.html">
-                <img src="https://cdn-icons-png.flaticon.com/512/61/61972.png" alt="home" class="home" >
+                <img src="../logos/smile-home.svg" alt="home" class="home" >
               </a>
-            </div>
+        <div>
             <!-- Premisa de juego -->
-              <div class="h1">
-                  <h1>Responde a la Bola de Cristal las siguientes preguntas<br>y recibirás una historieta interactiva basada en ti: 🔮</h1>
-                </div>         
+            <div class="h1">
+                <h1>Responde a la Bola de Cristal las siguientes preguntas<br>
+                  y recibirás una historieta interactiva basada en ti: 🔮</h1>
+        </div>         
     </header>
     <div>
             <img class = "bola" src="https://i.imgur.com/V9J9qBt.png" alt="Bola de cristal - Historieta">
