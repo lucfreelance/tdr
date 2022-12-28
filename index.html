@@ -14,93 +14,37 @@
     <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>                                                                                                                                                                                      
-  <nav class ="superior">
-    <!-- Menú hamburguesa para dispositivos móviles -->
-    <img src="./icons/icon_menu.svg" alt="menu" class="menu">
-  
-    <!-- Sección izquierda de la barra de navegación -->
-    <div>
-        <!-- Home -->
-        <a href="./index.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/61/61972.png" alt="home" class="home" >
-          </a>
-      <!-- Logo -->
-      <img src="./logos/logo_tdr.svg" alt="logo Trozos de Realidad" class="main-menu">
-      <!-- Lista de categorías -->
-      <ul>
-        <li>
-          <a href="/">Eventos</a>
-        </li>
-        <li>
-          <a href="/">Libros y +</a>
-        </li>
-        <li>
-          <a href="/">Redes sociales</a>
-        </li>
-        <li>
-          <a href="/">Postea tu propuesta</a>
-        </li>
-      </ul>
-    </div>
-  
-    <!-- Sección derecha de la barra de navegación -->
+   <nav>
     <div class="navbar-right">
-      <!-- Lista de enlaces de la cuenta de usuario -->
+    <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+    <div class="navbar-left">
+      <img src="./logos/logo_tdr.svg" alt="logo" class="logo">
+
+      
+    <div class="navbar-right">
       <ul>
-        <!-- Correo electrónico del usuario -->
-        <li class="navbar-email">trozos-de-realidad@fundacion-editorial.com</li>
-        <!-- Carrito de compras -->
-        <!-- <li class="navbar-shopping-cart">
-          <img src="./icons/icon_shopping_cart.svg" alt="shopping cart"> -->
-          <div>2</div>
-        </li>
-      </ul>
+        <li class="navbar-email">lucfreelance@gmail.com</li >
+        <li class="navbar-shopping-cart">
+          <img src="./icons/icon_shopping_cart.svg" alt="shopping cart"></li>
+        </ul>
+        </div>
+        
+ 
     </div>
-  
-    <!-- Menú desplegable para dispositivos de escritorio -->
-    <div class="desktop-menu">
-      <!-- Lista de enlaces del menú desplegable -->
-      <ul>
-        <li>
-          <a href="/">Mi cuenta</a>
-        </li>  
-        <li>
-          <a href="/">Cerrar sesión</a>
-        </li>
-      </ul>
-    </div>
-  
-    <!-- Menú desplegable para dispositivos móviles -->
-    <div class="mobile-menu">
-      <!-- Lista de categorías -->
-      <ul>
-        <li>
-          <a href="/">Eventos</a>
-        </li>
-        <li>
-          <a href="/">Libros y +</a>
-        </li>
-        <li>
-          <a href="/">Redes sociales</a>
-        </li>
-        <li>
-          <a href="/">Postea tu propuesta</a>
-        </li>
-      </ul>
-      <!-- Lista de enlaces de la cuenta de usuario -->
-      <ul>
-        <li>
-            <a href="/">Mi cuenta</a>
-        </li>  
-        <li>
-            <a href="#" class="email">example@example.com</a>
-        </li>
-        <li>
-            <a href="/" class="sign-out">Cerrar sesión</a>
-        </li>
-    </ul>
-  </div>
-</nav>   
+    <div class="desktop-menu inactive">   <!-- desktop-menu inactive open - js first 8 lines trozo -->
+        <ul>
+            <li>
+                <a href="/" class="title">Mis ordenes</a>
+            </li>
+            <li>
+                 <a href="/">Mi cuenta</a>
+            </li>
+            <li>
+                <a href="/">Salir</a>
+            </li>
+        </ul>        
+      </div>   <!-- desktop-menu inactive close - js first 8 lines trozo -->
+    </nav>
     <header>
         <h1 class="header-1">Te damos la BIENVENIDA al sitio web de</h1>
         <h1 class="header-2">Trozos De Realidad Fundación Editorial.</h1>

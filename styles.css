@@ -11,24 +11,6 @@
   --ff: "Poppins", sans-serif;
   --base-font: 1.6rem;
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 0.8rem;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--clr-bg-5);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--clr-bg-4);
-  border-radius: 0.8rem;
-}
-
-*, *::after, *::before {
-  box-sizing: border-box;
-}
-
 /* HTML y body */
 html {
   position: relative;
@@ -48,8 +30,76 @@ body {
   display: flex;
 }
 
-
 /* Main */
+main {
+  height: 500px;
+  grid-template-columns: 10% 80% 10%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  color: var(--black);
+  font-size: var(--md);
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 400px;
+}
+
+button {
+  background-color: var(--black);
+  border: none;
+  color: var(--white);
+  font-size: var(--md);
+  padding: 10px 20px;
+}
+
+p {
+  color: var(--black);
+  font-size: var(--md);
+  margin-top: 20px;
+}
+
+.bola {
+  width: 50%;
+  height: 50%;
+  margin:10px auto;
+  display:block;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10;
+}
+
+.footer {
+  text-align: center;
+  background-color: #116349;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;  
+  margin-top: 100px;
+  justify-content: space-between;            
+}
+
+.oculto {
+  display: none;
+}
+
+.resultado {
+cursor: pointer;
+background-color: #116349;
+}
+
+nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 80px;
+background-color: #fff;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* Main */
 main {
   height: 500px;
   grid-template-columns: 10% 80% 10%;
@@ -149,25 +199,10 @@ text-decoration: none;
 padding: 0 15px;
 }
 
-/* Sección derecha de la barra de navegación */
-.navbar-right {
-  display: flex;
-  align-items: center;
-}
-
 /* Lista de enlaces de la cuenta de usuario */
-.navbar-right ul {
+.navbar-right {
   list-style: none;
-  display: flex;
-  margin-right: 20px;
-  color: #333;
-}
-
-.desktop-menu {
-  display: inline-block;
-  text-decoration: none;
-  color: #333;
-  display: flex;
+  border-radius: 40%;
 }
 
 .table-board {
@@ -250,14 +285,6 @@ nav {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Menú hamburguesa para dispositivos móviles */
-.ham-menu {
-  display: none;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-}
-
 /* Sección izquierda de la barra de navegación */
 .menu-button {
   width: 5%;
@@ -272,6 +299,8 @@ nav {
   width: 180px;
   margin-left: 10px;
   position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 .main-menu {
@@ -280,7 +309,7 @@ nav {
   margin-left: 10px;
 }
 
-/* Lista de categorías */
+/* Lista de categorías */right
 .navbar-left ul {
   list-style: none;
   display: flex;
@@ -300,6 +329,10 @@ nav {
 .navbar-right {
   display: flex;
   align-items: center;
+  display: flex;
+align-items: center;
+display: flex;
+align-items: center;
 }
 
 /* Sección del banner home */
@@ -415,38 +448,18 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 /* Menú hamburguesa para dispositivos móviles */
 .menu {
-display: none;
 cursor: pointer;
 width: 40px;
 height: 40px;
+position: absolute;
+top: 60px;
+right: 60px;
 }
 
 /* Sección izquierda de la barra de navegación */
 .home {
 width: 33%;
 margin-left: 10px;
-display: flex;
-align-items: center;
-}
-
-/* Lista de categorías */
-.navbar-left ul {
-list-style: none;
-display: flex;
-margin-left: 30px;
-}
-
-/* Enlaces de la lista de categorías */
-.navbar-left ul li a {
-font-size: 1.2rem;
-font-weight: 500;
-color: #333;
-text-decoration: none;
-padding: 0 15px;
-}
-
-/* Sección derecha de la barra de navegación */
-.navbar-right {
 display: flex;
 align-items: center;
 }
@@ -467,21 +480,7 @@ align-items: center;
     margin:10px auto;
   }
 
-/* Lista de enlaces de la cuenta de usuario */
-.navbar-right ul {
-list-style: none;
-display: flex;
-margin-right: 20px;
-color: #333;
-}
 
-/* Correo electrónico del usuario */
-.navbar-email {
-font-size: 1.2rem;
-font-weight: 500;
-color: #333;
-margin-right: 30px;
-}
 
 .mobile-menu {
   margin-top: 20;
@@ -496,13 +495,110 @@ text-align: center;
 padding: 8px;
 }
 
-/* Responsive para dispositivos móviles */
-@media screen and (max-width: 600px) {
-  /* Estilos para dispositivos móviles */
+
+.table-board {
+  padding: 10px;
+  background-color: #f30;
+  margin:0 auto;  
+  font-size: 1.6rem;
+  position: absolute;
+  border-collapse: collapse;
 }
+
+.superior {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: var(--clr-bg);  
+  box-decoration-break: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.inactive {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--very-light-pink);
+}
+.menu {
+  display: none;
+}
+.logo {
+  width: 100px;
+}
+
+  .desktop-menu {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    background: var(--white);
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 6px;
+    padding: 20px 20px 0 20px;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+  }
+
+  .navbar-email {
+    display: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin-right: 30px;
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-right: 12px;
+  }
+
+  .navbar-shopping-cart {
+    width: 16px;
+    height: 16px;
+    background-color: var(--hospital-green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+@media (max-width: 600px) {
+  .menu {
+    display: block;
+  }
+}
+
 
 @media (min-width: 599px) {
   .mobile-menu {
     display: none;
   }
+}
+
+/* Responsive para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  /* Estilos para dispositivos móviles */
 }
