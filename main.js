@@ -1,6 +1,7 @@
-const menuEmail = document.querySelector('.navbar-email') // desktop-menu inactive open
-const desktopMenu = document.querySelector('.desktop-menu');
-menuEmail.addEventListener('click', toggleDesktopMenu);
-function toggleDesktopMenu() {
-  desktopMenu.classList.toggle('inactive'); // desktop-menu inactive close
+// Función que despliega el menu hamburguer
+const toggleadoMenu = document.querySelector('.ham-menu')
+const listMenu = document.querySelector('.list-menu');
+toggleadoMenu.addEventListener('click', toggleMenu);
+function toggleMenu() {
+    listMenu.classList.toggle('inactive');
 }

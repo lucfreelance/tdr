@@ -63,15 +63,6 @@ p {
   margin-top: 20px;
 }
 
-.bola {
-  width: 50%;
-  height: 50%;
-  margin:10px auto;
-  display:block;
-  padding: 10px 10px 10px 10px;
-  border-radius: 10;
-}
-
 .footer {
   text-align: center;
   background-color: #116349;
@@ -79,15 +70,6 @@ p {
   cursor: pointer;  
   margin-top: 100px;
   justify-content: space-between;            
-}
-
-.oculto {
-  display: none;
-}
-
-.resultado {
-cursor: pointer;
-background-color: #116349;
 }
 
 nav {
@@ -108,24 +90,6 @@ main {
   flex-direction: column;
 }
 
-input {
-  background-color: var(--white);
-  border: 2px solid var(--black);
-  color: var(--black);
-  font-size: var(--md);
-  margin-bottom: 10px;
-  padding: 10px;
-  width: 400px;
-}
-
-button {
-  background-color: var(--black);
-  border: none;
-  color: var(--white);
-  font-size: var(--md);
-  padding: 10px 20px;
-}
-
 p {
   color: var(--black);
   font-size: var(--md);
@@ -139,15 +103,6 @@ p {
   display:block;
   padding: 10px 10px 10px 10px;
   border-radius: 10;
-}
-
-.footer {
-  text-align: center;
-  background-color: #116349;
-  padding: 5px 5px 5px 5px;
-  cursor: pointer;  
-  margin-top: 100px;
-  justify-content: space-between;            
 }
 
 .oculto {
@@ -166,14 +121,6 @@ justify-content: space-between;
 height: 80px;
 background-color: #fff;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Menú hamburguesa para dispositivos móviles */
-.ham-menu {
-display: none;
-cursor: pointer;
-width: 40px;
-height: 40px;
 }
 
 /* Sección izquierda de la barra de navegación */
@@ -197,12 +144,6 @@ font-weight: 500;
 color: #333;
 text-decoration: none;
 padding: 0 15px;
-}
-
-/* Lista de enlaces de la cuenta de usuario */
-.navbar-right {
-  list-style: none;
-  border-radius: 40%;
 }
 
 .table-board {
@@ -301,6 +242,17 @@ nav {
   position: absolute;
   top: 30px;
   left: 30px;
+  border-radius: 25%;
+}
+
+/* Menú hamburguesa principal */
+.ham-menu {
+cursor: pointer;
+width: 40px;
+height: 40px;
+position: absolute;
+top: 40px;
+right: 40px;
 }
 
 .main-menu {
@@ -325,16 +277,6 @@ nav {
   padding: 0 15px;
 }
 
-/* Sección derecha de la barra de navegación */
-.navbar-right {
-  display: flex;
-  align-items: center;
-  display: flex;
-align-items: center;
-display: flex;
-align-items: center;
-}
-
 /* Sección del banner home */
   .banner {
     display: flex;
@@ -347,14 +289,18 @@ align-items: center;
     border-radius: 10px 10px 20px 20px;
     width: 30%;
   }
- 
-/* Lista de enlaces de la cuenta de usuario */
-.navbar-right ul {
-  list-style: none;
-  display: flex;
-  margin-right: 20px;
-  color: #333;
-}
+
+  /* Sección del banner divertidos*/
+  .banner-divertidos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 10);
+    border-radius: 10px 10px 20px 20px;
+    display: block;
+    width: 30%;
+    padding: 10px 10px 10px 10px;
+    }
 
 td {
   border: 1px solid #ddd;
@@ -413,28 +359,10 @@ a:hover {
           margin-bottom: 20px;
       }
 
-      input {
-          background-color: var(--white);
-          border: 2px solid var(--black);
-          color: var(--black);
-          font-size: var(--md);
-          margin-bottom: 10px;
-          padding: 10px;
-          width: 400px;
-      }
-
       p {
           color: var(--black);
           font-size: var(--md);
           margin-top: 20px;
-      }
-
-      .oculto {
-          display: none;
-      }
-
-      .resultado {
-          cursor: pointer;
       }
 
 nav {
@@ -446,16 +374,6 @@ background-color: #fff;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Menú hamburguesa para dispositivos móviles */
-.menu {
-cursor: pointer;
-width: 40px;
-height: 40px;
-position: absolute;
-top: 60px;
-right: 60px;
-}
-
 /* Sección izquierda de la barra de navegación */
 .home {
 width: 33%;
@@ -463,24 +381,6 @@ margin-left: 10px;
 display: flex;
 align-items: center;
 }
-
-/* Sección del banner divertidos*/
-.banner-divertidos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 30px;
-  min-width: 1050px;  
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 10);
-  border-radius: 10px 10px 20px 20px;
-    display: block;
-    width: 30%;
-    padding: 10px 10px 10px 10px;
-    margin:10px auto;
-  }
-
-
 
 .mobile-menu {
   margin-top: 20;
@@ -538,39 +438,53 @@ nav {
   border-bottom: 1px solid var(--very-light-pink);
 }
 .menu {
-  display: none;
-}
-.logo {
+  width: 16px;
+  height: 16px;
+  background-color: var(--hospital-green);
+  border-radius: 50%;
+  font-size: var(--sm);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  position: absolute;
+  top: 80px;
+  right: 60px;
+  background: var(--white);
   width: 100px;
+  height: auto;
+  border: 1px solid var(--very-light-pink);
+  border-radius: 6px;
+  padding: 20px 20px 0 20px;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  cursor: pointer;
+  margin-left: 10px;
 }
-
-  .desktop-menu {
-    position: absolute;
-    top: 60px;
-    right: 60px;
-    background: var(--white);
-    width: 100px;
-    height: auto;
-    border: 1px solid var(--very-light-pink);
-    border-radius: 6px;
-    padding: 20px 20px 0 20px;
-    text-decoration: none;
-    color: #333;
-    display: flex;
-  }
 
   .navbar-email {
-    display: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .list-menu {
     font-size: 1.2rem;
     font-weight: 500;
     color: #333;
     margin-right: 30px;
     color: var(--very-light-pink);
-    font-size: var(--sm);
+    font-size: var(--md);
     margin-right: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    justify-content: right;
   }
 
-  .navbar-shopping-cart {
+  /* .navbar-shopping-cart {
     width: 16px;
     height: 16px;
     background-color: var(--hospital-green);
@@ -583,7 +497,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
   
 @media (max-width: 600px) {
   .menu {
