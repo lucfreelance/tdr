@@ -67,7 +67,225 @@ main {
   text-align: center;
 } */
 
+body {
+  background-color: var(--very-light-pink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+h1 {
+  color: var(--white);
+  font-size: var(--lg);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h2 {
+  color: var(--white);
+  font-size: var(--md);
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  color: var(--black);
+  font-size: var(--md);
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 400px;
+}
+
+button {
+  background-color: var(--black);
+  border: none;
+  color: var(--white);
+  font-size: var(--md);
+  padding: 10px 20px;
+}
+
+p {
+  color: var(--black);
+  font-size: var(--md);
+  margin-top: 20px;
+}
+
+.bola {
+  width: 50%;
+  height: 50%;
+  margin:10px auto;
+  display:block;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10;
+}
+
+.footer {
+  text-align: center;
+  background-color: #116349;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;  
+  margin-top: 100px;
+  justify-content: space-between;            
+}
+
+.oculto {
+  display: none;
+}
+
+.resultado {
+cursor: pointer;
+background-color: #116349;
+}
+
+/* Si sale mal corta esta parte hasta los media queries */
+.header-1 {
+padding: 15;
+position: left;
+}
+
+.header-2 {
+padding: 15;
+position: right;
+}
+
+.header-3 {
+padding: 15;
+position: center;
+display: flex;
+justify-content: space-between;
+}
+
+nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 80px;
+background-color: #fff;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Menú hamburguesa para dispositivos móviles */
+.ham-menu {
+display: none;
+cursor: pointer;
+width: 40px;
+height: 40px;
+}
+
+/* Sección izquierda de la barra de navegación */
+.home {
+width: 25%;
+margin-left: 10px;
+display: inline-flexbox;
+}
+
+.main-menu {
+width: 180px;
+height: 50px;
+margin-left: 10px;
+}
+
+/* Lista de categorías */
+.navbar-left ul {
+list-style: none;
+display: flex;
+margin-left: 30px;
+}
+
+/* Enlaces de la lista de categorías */
+.navbar-left ul li a {
+font-size: 1.2rem;
+font-weight: 500;
+color: #333;
+text-decoration: none;
+padding: 0 15px;
+}
+
+/* Sección derecha de la barra de navegación */
+.navbar-right {
+display: flex;
+align-items: center;
+}
+
+/* Sección del banner home */
+.banner {
+display: flex;
+width: 50%;
+}
+
+/* Sección del banner divertidos*/
+.banner-divertidos {
+display: flex;
+width: 30%;
+}
+
+/* Lista de enlaces de la cuenta de usuario */
+.navbar-right ul {
+list-style: none;
+display: flex;
+margin-right: 20px;
+color: #333;
+}
+
+/* Correo electrónico del usuario */
+.navbar-email {
+font-size: 1.2rem;
+font-weight: 500;
+color: #333;
+margin-right: 30px;
+}
+
+.desktop-menu {
+display: inline-block;
+text-decoration: none;
+}
+
+.mobile-menu {
+margin-top: 20;
+display: block;
+text-decoration: none;
+}
+
+.table-board {
+padding: 10px;
+background-color: #f30;
+margin:0 auto;  
+font-size: 1.6rem;
+position: absolute;
+}
+
+td {
+border: 1px solid #ddd;
+text-align: center;
+padding: 8px;
+}
+
+.superior {
+text-decoration: none;
+font-size: 1.6rem;
+font-weight: 500;
+background-color: var(--clr-bg);  
+box-decoration-break: none;
+}
+
+.route-button {
+text-decoration: none;
+color: #fff;
+font: 400 var(--base-font) var(--ff);
+background-color: #f30;  
+text-decoration: none;
+font-size: 1.6rem;
+font-weight: 500;
+}
 
 .header-1 {
   padding: 15;
