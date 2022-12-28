@@ -146,23 +146,6 @@ cursor: pointer;
 background-color: #116349;
 }
 
-/* Si sale mal corta esta parte hasta los media queries */
-.header-1 {
-padding: 15;
-position: left;
-}
-
-.header-2 {
-padding: 15;
-position: right;
-}
-
-.header-3 {
-padding: 15;
-position: center;
-display: flex;
-justify-content: space-between;
-}
 
 nav {
 display: flex;
