@@ -11,15 +11,16 @@
   --ff: "Poppins", sans-serif;
   --base-font: 1.6rem;
 
-/* HTML y body */
+/* HTML, Body, Main */
+/* HTML */
 html {
   position: relative;
   font-size: 62.5%;
   min-height: 100%;
 }
-
 /* Body */
 body {
+  font-family: 'Quicksand', sans-serif;
   font: 400 var(--base-font) var(--ff);
   background-color: var(--clr-bg);
   color: var(--clr-text);
@@ -29,7 +30,6 @@ body {
   align-items: center;
   display: flex;
 }
-
 /* Main */
 main {
   height: 500px;
@@ -69,25 +69,12 @@ p {
   padding: 5px 5px 5px 5px;
   cursor: pointer;  
   margin-top: 100px;
-  justify-content: space-between;            
-}
-
-nav {
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 80px;
-background-color: #fff;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-* Main */
-main {
-  height: 500px;
-  grid-template-columns: 10% 80% 10%;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  right: 10px;
+  bottom: 0px;
+  border-radius: 15%;
+  font-size: 1.6em;
 }
 
 p {
@@ -114,38 +101,6 @@ cursor: pointer;
 background-color: #116349;
 }
 
-nav {
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 80px;
-background-color: #fff;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Sección izquierda de la barra de navegación */
-.home {
-width: 25%;
-margin-left: 10px;
-display: inline-flexbox;
-}
-
-/* Lista de categorías */
-.navbar-left ul {
-list-style: none;
-display: flex;
-margin-left: 30px;
-}
-
-/* Enlaces de la lista de categorías */
-.navbar-left ul li a {
-font-size: 1.2rem;
-font-weight: 500;
-color: #333;
-text-decoration: none;
-padding: 0 15px;
-}
-
 .table-board {
   padding: 10px;
   background-color: #f30;
@@ -153,12 +108,6 @@ padding: 0 15px;
   font-size: 1.6rem;
   position: absolute;
   border-collapse: collapse;
-}
-
-td {
-  border: 1px solid #ddd;
-  text-align: center;
-  padding: 8px;
 }
 
 .superior {
@@ -217,15 +166,6 @@ td {
   font-weight: bold;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Sección izquierda de la barra de navegación */
 .menu-button {
   width: 5%;
@@ -255,41 +195,6 @@ top: 40px;
 right: 40px;
 }
 
-.main-menu {
-  width: 180px;
-  height: 50px;
-  margin-left: 10px;
-}
-
-/* Lista de categorías */right
-.navbar-left ul {
-  list-style: none;
-  display: flex;
-  margin-left: 30px;
-}
-
-/* Enlaces de la lista de categorías */
-.navbar-left ul li a {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #333;
-  text-decoration: none;
-  padding: 0 15px;
-}
-
-/* Sección del banner home */
-  .banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 30px;
-    min-width: 1050px;  
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 10);
-    border-radius: 10px 10px 20px 20px;
-    width: 30%;
-  }
-
   /* Sección del banner divertidos*/
   .banner-divertidos {
     display: flex;
@@ -302,12 +207,6 @@ right: 40px;
     padding: 10px 10px 10px 10px;
     }
 
-td {
-  border: 1px solid #ddd;
-  text-align: center;
-  padding: 8px;
-}
-
 .route-button {
   color: #fff;
   font: 400 var(--base-font) var(--ff);
@@ -318,30 +217,39 @@ td {
   font-size: 1.6rem;
   border-radius: 10%;
   cursor: pointer;
+  margin-top: 30;
+}
+
+#button-1 {
+  text-decoration: none;
+}
+
+#button-2 {
+  text-decoration: none;
 }
 
 .route-diver {
-  color: #fff;
+  color: var(--black);
   font: 400 var(--base-font) var(--ff);
-  background-color: blueviolet;  
+  background-color: skyblue;
   font: 400 var(--base-font) var(--ff);
   font-weight: 500;
   text-decoration: none;
   font-size: 1.6rem;
-  border-radius: 10%;
   cursor: pointer;
+  border-radius: 10%;
+  margin-top: 30;
+  margin-right: 15px;
 }
 
-/* Enlaces */
-a {
-  display: block;
-  color: #f2f2f2;
+.route-button {
+
+  font: 400 var(--base-font) var(--ff);
+  font-weight: 500;
   text-decoration: none;
-  padding: 10px;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
-a:hover {
-  background-color: #f2f2f2;
-} */
 
         /* Variables CSS */
         :root {
@@ -378,18 +286,9 @@ a:hover {
           margin-top: 20px;
       }
 
-nav {
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 80px;
-background-color: #fff;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Sección izquierda de la barra de navegación */
+/* Sección home */
 .home {
-width: 33%;
+width: 25%;
 margin-left: 10px;
 display: flex;
 align-items: center;
@@ -408,72 +307,18 @@ text-align: center;
 padding: 8px;
 }
 
-
-.table-board {
-  padding: 10px;
-  background-color: #f30;
-  margin:0 auto;  
-  font-size: 1.6rem;
-  position: absolute;
-  border-collapse: collapse;
-}
-
-.superior {
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 500;
-  background-color: var(--clr-bg);  
-  box-decoration-break: none;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-body {
-  margin: 0;
-  font-family: 'Quicksand', sans-serif;
-}
-
 .inactive {
   display: none;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 24px;
-  border-bottom: 1px solid var(--very-light-pink);
-}
-.menu {
-  width: 16px;
-  height: 16px;
-  background-color: var(--hospital-green);
-  border-radius: 50%;
-  font-size: var(--sm);
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: right;
-  position: absolute;
-  top: 80px;
-  right: 60px;
-  background: var(--white);
-  width: 100px;
-  height: auto;
-  border: 1px solid var(--very-light-pink);
-  border-radius: 6px;
-  padding: 20px 20px 0 20px;
-  text-decoration: none;
-  color: #333;
-  display: flex;
-  cursor: pointer;
-  margin-left: 10px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 80px;
+background-color: #fff;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+border-bottom: 1px solid var(--very-light-pink);
 }
 
   .navbar-email {
@@ -482,36 +327,20 @@ nav {
   }
 
   .list-menu {
-    font-size: 1.2rem;
-    font-weight: 500;
+    text-decoration: none;
+    justify-content: right;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500px;
     color: #333;
     margin-right: 30px;
-    color: var(--very-light-pink);
     font-size: var(--md);
     margin-right: 12px;
-    text-decoration: none;
     cursor: pointer;
     position: absolute;
     top: 60px;
     right: 40px;
-    justify-content: right;
   }
 
-  /* .navbar-shopping-cart {
-    width: 16px;
-    height: 16px;
-    background-color: var(--hospital-green);
-    border-radius: 50%;
-    font-size: var(--sm);
-    font-weight: bold;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-  
 @media (max-width: 600px) {
   .menu {
     display: block;
