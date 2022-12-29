@@ -41,6 +41,7 @@ main {
   flex-direction: column;
   font-family: Arial, sans-serif;
   line-height: 200%;
+  margin-bottom: 10%;
 }
 
 input {
@@ -229,6 +230,10 @@ right: 40px;
   border-radius: 10%;
   cursor: pointer;
   margin-top: 30;
+}
+
+.return-button {
+  position: fixed;
 }
 
 #button-1 {
