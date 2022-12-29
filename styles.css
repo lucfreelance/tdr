@@ -22,6 +22,8 @@ html {
 body {
   font-family: 'Quicksand', sans-serif;
   font: 400 var(--base-font) var(--ff);
+  background-image: url("https://cdn.pixabay.com/photo/2016/12/20/22/03/background-1921589_960_720.jpg");
+  background-size: cover;
   background-color: var(--clr-bg);
   color: var(--clr-text);
   width: 92%;
@@ -37,6 +39,8 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 200%;
 }
 
 input {
@@ -65,8 +69,8 @@ p {
 
 .footer {
   text-align: center;
-  background-color: #116349;
-  padding: 5px 5px 5px 5px;
+  background-color:  #161722;
+  padding: 1vw 1vw 1vw 1vw;
   cursor: pointer;  
   margin-top: 100px;
   justify-content: space-between;
@@ -75,6 +79,12 @@ p {
   bottom: 0px;
   border-radius: 15%;
   font-size: 1.6em;
+  color: white; /* agrega un color blanco al texto */
+  text-decoration: none; /* elimina el subrayado del enlace */
+}
+
+.footer:hover {
+  background-color: #3bb3c3; /* cambia el color de fondo al pasar el mouse */
 }
 
 p {
@@ -128,6 +138,7 @@ background-color: #116349;
   margin-top: 50px;
   margin-left: 10px;
   font-weight: bold;
+  font-family: Fantasy;
 }
 
 .header-2 {
@@ -231,15 +242,20 @@ right: 40px;
 .route-diver {
   color: var(--black);
   font: 400 var(--base-font) var(--ff);
-  background-color: skyblue;
+  background-color: #09941c;
   font: 400 var(--base-font) var(--ff);
   font-weight: 500;
   text-decoration: none;
   font-size: 1.6rem;
   cursor: pointer;
   border-radius: 10%;
-  margin-top: 30;
   margin-right: 15px;
+  transition: background-color 0.2s ease; /* agrega una transición suave al cambio de color de fondo */
+}
+
+.route-diver:hover {
+  background-color: skyblue; /* cambia el color de fondo al pasar el mouse */
+  transform: translateY(-2px); /* agrega un efecto de presionado al botón al pasar el mouse */
 }
 
 .route-button {

@@ -1,104 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historieta - Responde ocho sencillas preguntas y recibirás una divertida historieta interactiva basada en ti 😉</title>
-    <style type="text/css">
-        /* Variables CSS */
-        :root {
-            --black: #000000;
-            --white: #ffffff;
-            --very-light-pink: #6346b3;
-            --text-input-field:#c7c7c7;
-            --#5837D0;
-            --#394A6D;
-            --#3C9D9B;
-            --#52DE97;
-            --#C0FFB3;
-            --sm: 14px;
-            --md: 16px;
-            --lg: 18px;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historieta - Responde ocho sencillas preguntas y recibirás una divertida historieta interactiva basada en ti 😉</title>
+  <style type="text/css">
+      /* Variables CSS */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --very-light-pink: #6346b3;
+  --text-input-field:#c7c7c7;
+  --#5837D0;
+  --#394A6D;
+  --#3C9D9B;
+  --#52DE97;
+  --#C0FFB3;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+}
 
-        /* Reglas de estilo */
-        * {
-            margin: 20;
-            padding: 10;
-            box-sizing: border-box;
-        }
+/* Reglas de estilo */
+* {
+  margin: 20;
+  padding: 10;
+  box-sizing: border-box;
+}
 
-        body {
-            background-color: var(--very-light-pink);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/21/23/25/link-1271843_960_720.png");
+  background-size: auto;
+}
 
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-        input {
-            background-color: var(--white);
-            border: 2px solid var(--black);
-            color: var(--black);
-            font-size: var(--md);
-            margin-bottom: 10px;
-            padding: 10px;
-            width: 400px;
-        }
+input {
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  color: var(--black);
+  font-size: var(--md);
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 400px;
+}
 
   .button {
-    background-color: var(--gray);
-    font-size: var(--md);
-    padding: 10px 20px;
-    margin: 0 10px 0 10px; 
+  background-color: var(--gray);
+  font-size: var(--md);
+  padding: 10px 20px;
+  margin: 0 10px 0 10px; 
   }
 
-        p {
-            color: var(--black);
-            font-size: var(--md);
-            margin-top: 20px;
-        }
+p {
+  color: var(--black);
+  font-size: var(--md);
+  margin-top: 20px;
+}
 
-        .h1 {
-          font-size: var(--sm);
-          color: var(--white);
-          background-color: var(--black);
-          margin: 10px 10px 10px 10px; 
-          text-align: center; /* Esta línea centrará el texto */
-          font-family: "Roboto", sans-serif;
-        }
+.h1 {
+  font-size: var(--sm);
+  color: var(--white);
+  background-color: var(--black);
+  margin: 10px 10px 10px 10px; 
+  text-align: center; /* Esta línea centrará el texto */
+  font-family: "Roboto", sans-serif;
+}
 
-        .h2 {
-            color: var(--black);
-            font-size: var(--bg);
-            margin-bottom: 20px;
-            font-family: "Roboto", sans-serif;
-        }
+.h2 {
+  color: var(--black);
+  font-size: var(--bg);
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
 
-        .bola {
-            width: 50%;
-            height: 50%;
-            margin:10px auto;
-            display:block;
-            padding: 10px 10px 10px 10px;
-            border-radius: 10%;
-        }
+.bola {
+  width: 50%;
+  height: 50%;
+  margin:10px auto;
+  display:block;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10%;
+}
 
-        .resultado {
-          cursor: pointer;
-          background-color: #116349;
-            text-align: center;
-            padding: 10px 10px 10px 10px;
-            cursor: pointer;  
-            margin-top: 25px;
-            font-family: "Roboto", sans-serif;
-        }
+.resultado {
+  cursor: pointer;
+  background-color: #116349;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;  
+  margin-top: 25px;
+  font-family: "Roboto", sans-serif;
+}
 
         /* Si sale mal corta esta parte hasta los media queries */
         .header-1 {
@@ -116,7 +114,7 @@ nav {
 }
 
 .home {
-  width: 10%;
+  width: 5%;
   display: flex;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -142,59 +140,59 @@ nav {
   font-weight: 500;
 }
 
-  .footer {
-            text-align: center;
-            background-color: #116349;
-            padding: 5px 5px 5px 5px;
-            cursor: pointer;  
-            margin-top: 100px;
-            display: flex;
-            justify-content: center; /* centra los botones en el contenedor */
-            box-shadow: 0 4px 6px rgba(111, 222, 333, 25);
-        }
+.footer {
+  text-align: center;
+  background-color: #116349;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;  
+  margin-top: 100px;
+  display: flex;
+  justify-content: center; /* centra los botones en el contenedor */
+  box-shadow: 0 4px 6px rgba(111, 222, 333, 25);
+}
 
-  .oculto {
-    display: none;
-    text-align: center;
-    background-color: #116349;
-    padding: 5px 5px 5px 5px;
-    cursor: pointer;  
-    margin-top: 100px;
-    justify-content: space-between;   
+.oculto {
+  display: none;
+  text-align: center;
+  background-color: #116349;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;  
+  margin-top: 100px;
+  justify-content: space-between;   
+}
+
+#result {
+  font: 400 var(--base-font) var(--ff);
+  color: #fff;
+  text-align: center;
+  background-color: #25d4a5;
+  padding: 5px 5px 5px 5px;
+  margin-top: 100px;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 15%;
+}
+
+#btnCalcular {
+  font: 400 var(--base-font) var(--ff);
+  color: #fff;
+  text-align: center;
+  background-color: #116349;
+  padding: 5px;
+  margin-top: 100px;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 480px) {
+    * {
+        margin: 10px;
     }
-
-  #result {
-    font: 400 var(--base-font) var(--ff);
-    color: #fff;
-    text-align: center;
-    background-color: #25d4a5;
-    padding: 5px 5px 5px 5px;
-    margin-top: 100px;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 15%;
-  }
-
-  #btnCalcular {
-    font: 400 var(--base-font) var(--ff);
-    color: #fff;
-    text-align: center;
-    background-color: #116349;
-    padding: 5px;
-    margin-top: 100px;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-
-        @media screen and (max-width: 480px) {
-            * {
-                margin: 10px;
-            }
-        }
+}
 
     </style>
 </head>
