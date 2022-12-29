@@ -22,7 +22,7 @@ html {
 body {
   font-family: 'Quicksand', sans-serif;
   font: 400 var(--base-font) var(--ff);
-  background-image: url("https://cdn.pixabay.com/photo/2016/12/29/18/44/background-1939128_960_720.jpg");
+  /* background-image: url("https://cdn.pixabay.com/photo/2016/12/29/18/44/background-1939128_960_720.jpg"); */
   background-size: cover;
   background-color: var(--clr-bg);
   color: var(--clr-text);
@@ -41,8 +41,12 @@ main {
   display: flex;
   flex-direction: column;
   font-family: Arial, sans-serif;
-  line-height: 200%;
+  line-height: 150%;
   margin-bottom: 10%;
+}
+
+.main-menu {
+
 }
 
 a:link, a:visited, a:active {
@@ -74,22 +78,48 @@ p {
 }
 
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  text-decoration: none; /* elimina el subrayado del enlace */
   background-color:  #161722;
-  padding: 1vw 1vw 1vw 1vw;
+  padding: 0.6vw 0.6vw 0.6vw 0.6vw;
   cursor: pointer;  
   margin-top: 100px;
   position: fixed;
   right: 10px;
   bottom: 0px;
   border-radius: 15%;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: white; /* agrega un color blanco al texto */
-  text-decoration: none; /* elimina el subrayado del enlace */
 }
 
 .footer:hover {
   background-color: #3bb3c3; /* cambia el color de fondo al pasar el mouse */
+}
+
+.footer-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #161722;
+  color: #fafafa;
+  font-size: 1.2rem;
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+}
+
+.footer-2 a {
+  color: #f2a365;
+  text-decoration: none;
+}
+
+.footer-2:hover {
+  background-color: #3bb3c3; /* cambia el color de fondo al pasar el mouse */
+  padding: 5px;
+  border-radius: 20%;
 }
 
 p {
@@ -118,11 +148,39 @@ background-color: #116349;
 
 .table-board {
   padding: 10px;
-  background-color: #f30;
-  margin:0 auto;  
+  background-color: rgb(239, 31, 31);
+  margin:0 auto;
   font-size: 1.6rem;
+  padding: 10px;
   position: absolute;
   border-collapse: collapse;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  letter-spacing: 1px;
+  color: var(--black);
+}
+
+.table-board:hover {
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.table-board td {
+  border-radius: 5px;
+  transition: all 0.4s ease;
+  padding: 5px;
+}
+
+.table-board td:hover {
+  background-color: rgb(5, 230, 5);
+  color: #666;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.enlace {
+  color: burlywood;
+}
+
+.enlace:hover {
+  color: #666;
 }
 
 .superior {
@@ -169,16 +227,20 @@ background-color: #116349;
 .header-4 {
   display: flex;
   align-items: center;
-  margin: 0 auto;
-  padding: 35px;
+  margin:   auto;
+  padding: 40px;
   height: 80px;
-  font-weight: 500;
+  font-weight: bold;
   color: #fefefe;
   font-size: 1.9rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   justify-content: center;
-  background-color: #f30;
+  background-color: rgb(239, 31, 31);
+}
+
+.header-4:hover {
+  color: rgb(43, 9, 9);
   font-weight: bold;
 }
 
@@ -232,6 +294,8 @@ right: 40px;
   position: fixed;
   top: 0;
   background-color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Sección del banner divertidos*/
@@ -257,14 +321,17 @@ right: 40px;
   border-radius: 10%;
   cursor: pointer;
   margin-top: 30;
+  list-style-type: none;
 }
 
 #button-1 {
   text-decoration: none;
+  list-style-type: none;
 }
 
 #button-2 {
   text-decoration: none;
+  list-style-type: none;
 }
 
 .route-diver {
@@ -277,6 +344,7 @@ right: 40px;
   cursor: pointer;
   border-radius: 10%;
   margin-right: 15px;
+  list-style-type: none;
   transition: background-color 0.2s ease; /* agrega una transición suave al cambio de color de fondo */
 }
 
@@ -330,9 +398,15 @@ p {
   margin-top: 20px;
 }
 
+.ul {  
+  list-style-type: none;
+  line-height: 1.5;
+  letter-spacing:0.1ch;
+}
+
 /* Sección home */
 .home {
-width: 25%;
+width: 30%;
 margin-left: 10px;
 display: flex;
 align-items: center;
@@ -348,7 +422,6 @@ align-items: center;
 td {
 border: 1px solid #ddd;
 text-align: center;
-padding: 8px;
 }
 
 .inactive {
@@ -361,6 +434,7 @@ align-items: center;
 justify-content: space-between;
 height: 80px;
 background-color: #fff;
+list-style-type: none;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 border-bottom: 1px solid var(--very-light-pink);
 }
@@ -368,11 +442,14 @@ border-bottom: 1px solid var(--very-light-pink);
 .navbar-email {
   cursor: pointer;
   text-decoration: none;
+  list-style-type: none;
+  color:#09941c;
 }
 
 .list-menu {
   border-radius: 10px;
   text-decoration: none;
+  list-style-type: none;
   justify-content: right;
   font-weight: 400px;
   margin-right: 30px;
@@ -384,7 +461,10 @@ border-bottom: 1px solid var(--very-light-pink);
   right: 45px;
   padding-right: 20px;
   background-color: rgba(150, 116, 116, 0.5);
+  }
 
+  external-form {
+  position: fixed;
   }
 
 @media (max-width: 600px) {

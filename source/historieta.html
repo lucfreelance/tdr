@@ -50,12 +50,12 @@ input {
   width: 400px;
 }
 
-  .button {
-  background-color: var(--gray);
-  font-size: var(--md);
-  padding: 10px 20px;
-  margin: 0 10px 0 10px; 
-  }
+.button {
+background-color: var(--gray);
+font-size: var(--md);
+padding: 10px 20px;
+margin: 0 10px 0 10px; 
+}
 
 p {
   color: var(--black);
@@ -77,11 +77,11 @@ p {
   font-size: var(--bg);
   margin-bottom: 20px;
   font-family: "Roboto", sans-serif;
+  text-align: center; /* Esta línea centrará el texto */
 }
 
 .bola {
-  width: 50%;
-  height: 50%;
+  width: 20%;
   margin:10px auto;
   display:block;
   padding: 10px 10px 10px 10px;
@@ -96,12 +96,7 @@ p {
   cursor: pointer;  
   margin-top: 25px;
   font-family: "Roboto", sans-serif;
-}
-
-        /* Si sale mal corta esta parte hasta los media queries */
-        .header-1 {
-  padding: 15;
-  position: left;
+  border-radius: 20%;
 }
 
 nav {
@@ -122,12 +117,6 @@ nav {
   justify-content: center;
   margin: auto; 
   border-radius: 25%;
-}
-
-.main-menu {
-  width: 180px;
-  height: 50px;
-  margin-left: 10px;
 }
 
 .route-button {
@@ -151,10 +140,19 @@ nav {
   box-shadow: 0 4px 6px rgba(111, 222, 333, 25);
 }
 
+.footer-historieta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: none;
+  color: #fafafa; 
+  justify-content: center;
+}
+
 .oculto {
   display: none;
   text-align: center;
-  background-color: #116349;
+  background-color: #c418b0;
   padding: 5px 5px 5px 5px;
   cursor: pointer;  
   margin-top: 100px;
@@ -189,12 +187,12 @@ nav {
 }
 
 @media screen and (max-width: 480px) {
-    * {
-        margin: 10px;
-    }
+* {
+    margin: 10px;
+}
 }
 
-    </style>
+</style>
 </head>
 <body>
     <header>        
@@ -210,9 +208,8 @@ nav {
         </div>         
     </header>
     <div>
-            <img class = "bola" src="https://i.imgur.com/V9J9qBt.png" alt="Bola de cristal - Historieta">
-    </div>
-    
+      <img class = "bola" src="https://i.imgur.com/V9J9qBt.png" alt="Bola de cristal - Historieta">
+    </div>    
     <h2 class ="h2">Escribe... </h2>
 <main>
     <input id="trozo1" placeholder="Tu actor / actriz favorito(a) 🎭" /><br>
@@ -234,6 +231,10 @@ nav {
       </p>
     </span>
 </main>
+<footer class ="footer-historieta">
+  <div><button onclick="location.reload()">Argumenta otra vez</button></div>
+  <div><button onclick="location.href='../index.html'">Regresa a Inicio</button></div>
+</footer>
 
 <script type="text/javascript">
   const h1 = document.querySelector('h1');
@@ -257,9 +258,6 @@ nav {
   pResult.innerText = sumaInputs
 };
 </script>
-  <footer class = "footer">
-    <button onclick="location.reload()">Argumenta otra vez</button>
-    <button onclick="location.href='../index.html'">Regresa a Inicio</button>
-  </footer>
-</body>
+
+  </body>
 </html>
