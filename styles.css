@@ -44,6 +44,10 @@ main {
   margin-bottom: 10%;
 }
 
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
+
 input {
   background-color: var(--white);
   border: 2px solid var(--black);
@@ -134,13 +138,14 @@ background-color: #116349;
   position: center;
   text-align: center;
   text-decoration: none;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 20px;
   margin-top: 50px;
   margin-left: 10px;
-  font-weight: bold;
-  font-family: Fantasy;
+  font-size: 2em;
 }
+
+
 
 .header-2 {
   padding: 15px;
@@ -176,6 +181,17 @@ background-color: #116349;
   justify-content: center;
   background-color: #f30;
   font-weight: bold;
+}
+
+/*  */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*  */
+.container img {
+  width: 50%;
 }
 
 /* Sección izquierda de la barra de navegación */
@@ -230,10 +246,6 @@ right: 40px;
   border-radius: 10%;
   cursor: pointer;
   margin-top: 30;
-}
-
-.return-button {
-  position: fixed;
 }
 
 #button-1 {
